@@ -10,4 +10,4 @@ COPY models ./models
 COPY data/serving ./data/serving
 ENV PYTHONPATH=/app/src:/app/backend PORT=8000 ALLOWED_ORIGINS=http://localhost:3000
 WORKDIR /app/backend
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
+CMD ["sh", "-c", "python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
