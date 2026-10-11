@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.pytest_cache/
+data/raw/
+data/processed/
+.env
+.DS_Store
+frontend/node_modules/
+frontend/.next/
+
+# Environment files and secrets
+.env.*
+!.env.example
+!.env.*.example
+frontend/.env.local
+
+# Next.js build output
+frontend/out/
+
+# Python test and cache files
+.coverage
+htmlcov/

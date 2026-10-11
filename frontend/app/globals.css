@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html { background: #E4E6E1; }
+body { @apply font-body text-ink bg-concrete antialiased; font-size: 17px; line-height: 1.55; }
+h1, h2, h3 { @apply font-display; letter-spacing: -0.01em; line-height: 1.1; }
+:focus-visible { outline: 3px solid #F2B21B; outline-offset: 2px; }
+select, input[type="range"], button { cursor: pointer; }
+select:disabled, button:disabled { cursor: not-allowed; opacity: .55; }
+.lane-rule { background-image: repeating-linear-gradient(90deg, #A9B0A8 0 18px, transparent 18px 34px); height: 3px; }
+@keyframes led-in { from { opacity: 0; } to { opacity: 1; } }
+.led-in { animation: led-in .5s steps(4, end) both; }
+@media (prefers-reduced-motion: reduce) { .led-in { animation: none; } }

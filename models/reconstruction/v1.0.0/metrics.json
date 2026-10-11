@@ -1,0 +1,60 @@
+{
+  "speed": {
+    "unit": "km/h",
+    "n_test_points": 2050,
+    "rmse_lightgbm": 1.8293543280043394,
+    "rmse_linear_interpolation": 2.1194848505300827,
+    "rmse_last_observation": 4.284442039772176,
+    "rmse_neighbor_link_average": 7.075708246939781,
+    "by_gap": {
+      "single_point": {
+        "n": 976,
+        "lightgbm": 1.4311089580970817,
+        "linear_interpolation": 1.2999590511656585
+      },
+      "short_gap_2_4": {
+        "n": 347,
+        "lightgbm": 2.37576326826458,
+        "linear_interpolation": 2.573248538652908
+      },
+      "long_gap_5_plus": {
+        "n": 727,
+        "lightgbm": 1.9982547894634144,
+        "linear_interpolation": 2.6903487357224636
+      }
+    },
+    "best_iteration": 151
+  },
+  "flow_pl": {
+    "unit": "veh/h/lane",
+    "n_test_points": 1880,
+    "rmse_lightgbm": 27.730236986123234,
+    "rmse_linear_interpolation": 33.67684584953674,
+    "rmse_last_observation": 70.34302680540841,
+    "rmse_neighbor_link_average": 152.07700585334428,
+    "by_gap": {
+      "single_point": {
+        "n": 915,
+        "lightgbm": 24.59956936837262,
+        "linear_interpolation": 27.384262185700045
+      },
+      "short_gap_2_4": {
+        "n": 355,
+        "lightgbm": 24.48059823103582,
+        "linear_interpolation": 29.17856603280429
+      },
+      "long_gap_5_plus": {
+        "n": 610,
+        "lightgbm": 33.36835542158667,
+        "linear_interpolation": 43.30155042005654
+      }
+    },
+    "best_iteration": 481
+  },
+  "physics": {
+    "speed_pred_above_free_flow_rate": 0.0,
+    "flow_pred_above_capacity_rate": 0.0,
+    "note": "Post-correction clips speed to [3, free-flow] and flow to [0, min(capacity, jam density x speed)].",
+    "rmse_speed_after_postcorrect": 1.8280701172279659
+  }
+}

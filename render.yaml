@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: trafficflowiq-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://YOUR-APP.vercel.app
+      - key: LOG_LEVEL
+        value: INFO
