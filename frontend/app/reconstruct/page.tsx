@@ -65,7 +65,7 @@ export default function ReconstructPage() {
           </Field>
           <Field label="Window start">
             <select className={selectCls} value={s.time} onChange={(e) => s.setTime(e.target.value)} disabled={!s.times.length}>
-              <option value="">Select a time</option>
+              <option value="">{s.timesLoading ? "Loading times…" : s.date ? "Select a time" : "Pick a date first"}</option>
               {s.times.map((t) => <option key={t} value={t}>{t}</option>)}
             </select>
           </Field>
